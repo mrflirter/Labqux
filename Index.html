@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labqux - Crypto Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="firebase.js" type="module" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Labqux</h1>
+    <nav>
+      <button onclick="navigate('whales')">🐋 Whales</button>
+      <button onclick="navigate('metrics')">📊 Metrics</button>
+      <button onclick="navigate('news')">📰 News</button>
+      <button onclick="navigate('contact')">📬 Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login-section">
+      <h2>Login / Register</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <div class="auth-buttons">
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+      </div>
+      <div class="google-login">
+        <button class="google-btn" onclick="loginWithGoogle()">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" />
+          Sign in with Google
+        </button>
+      </div>
+    </section>
+
+    <section id="crypto-data">
+      <h2>Live Crypto Prices</h2>
+      <div id="crypto-container">Loading...</div>
+    </section>
+
+    <section id="news-ticker">
+      <h2>📰 Latest Crypto News</h2>
+      <marquee behavior="scroll" direction="left" id="news-marquee">Loading news...</marquee>
+    </section>
+
+    <section id="metrics">
+      <h2>📊 On-chain Metrics</h2>
+      <div id="metrics-container">Loading...</div>
+    </section>
+
+    <section id="whales">
+      <h2>🐋 Whale Transactions</h2>
+      <div id="whale-container">Loading...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Labqux. All rights reserved.</p>
+  </footer>
+</body>
+</html>
